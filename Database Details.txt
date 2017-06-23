@@ -1,0 +1,27 @@
+Database Name:aspm
+Database Server Name: localhost
+Database Username: root
+
+Table1 Name: user
+
+CREATE TABLE `aspm`.`user` ( `UID` INT(11) NOT NULL AUTO_INCREMENT , `firstName` VARCHAR(255) NOT NULL ,`lastName` VARCHAR(255)NOT NULL ,`phone` VARCHAR(20)NOT NULL, `address` VARCHAR(255)NOT NULL, `email` VARCHAR(255) NOT NULL , `password` VARCHAR(255) NOT NULL ,PRIMARY KEY (`UID`), UNIQUE (`email`)) ENGINE = InnoDB;
+
+Table2 Name: feedback
+
+CREATE TABLE `aspm`.`feedback` ( `firstName` VARCHAR(255) NOT NULL , `email` VARCHAR(255) NOT NULL ,`feedback` VARCHAR(1000) NOT NULL ) ENGINE = InnoDB;
+
+Table3 Name: res_owner
+
+CREATE TABLE `aspm`.`res_owner`(`id` int(11) NOT NULL AUTO_INCREMENT,`oName` VARCHAR(255) NOT NULL , `rName` VARCHAR(255) NOT NULL,`tname` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, PRIMARY KEY (`id`),UNIQUE(`email`),UNIQUE(`tname`))ENGINE = InnoDB AUTO_INCREMENT=10;
+
+Table4 Name: user_detail
+
+CREATE TABLE 'aspm'.`admin_detail` (`id` int(11) NOT NULL AUTO_INCREMENT, `menu` varchar(255) NOT NULL,`price` int(11) NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB AUTO_INCREMENT=10;
+
+CREATE TABLE `aspm`.`booking` ( `tname` VARCHAR(255) NOT NULL , `date` DATE ,`time` TIME, `No_Of_Persons` int(11) NOT NULL) ENGINE = InnoDB;
+
+CREATE TABLE `aspm`.`delivery` ( `tname` VARCHAR(255) NOT NULL,`name` VARCHAR(255) NOT NULL ,`address` VARCHAR(255) NOT NULL, `menu` VARCHAR(255) NOT NULL, `quantity` VARCHAR(255) NOT NULL, `extra` VARCHAR(255) NOT NULL, `payment` float(11) NOT NULL) ENGINE = InnoDB;
+
+
+
+karlsmat1995@gmail.com--karlsmat@1995
